@@ -1,4 +1,4 @@
-package com.example.jenkinsapplication;
+package com.example.jenkinsapplication.servlets;
 
 import java.io.*;
 import javax.servlet.http.*;
