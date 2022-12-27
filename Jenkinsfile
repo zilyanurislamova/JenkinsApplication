@@ -22,5 +22,6 @@ pipeline {
             steps {
                 sh "mvn tomcat7:deploy"
             }
+        }
     }
 }
