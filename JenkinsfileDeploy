@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    tools {
+        maven '3.8.6'
+    }
+
+    stages {
+        stage('Deploy') {
+            steps {
+                sh "mvn tomcat7:deploy"
+            }
+        }
+    }
+}
