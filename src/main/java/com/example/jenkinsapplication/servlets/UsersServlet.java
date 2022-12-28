@@ -24,13 +24,14 @@ public class UsersServlet extends HttpServlet {
                     "postgres", "postgres");
 
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT name FROM users");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
 
             printWriter.println("<html>");
             while (resultSet.next()) {
-                printWriter.println("<h2>" + resultSet.getString("name") + "</h2>");
+                printWriter.println("<h2>" + resultSet.getString("name")
+                        + resultSet.getString("surname")
+                        + resultSet.getInt("age")+ "</h2>");
             }
-            printWriter.println("<h2>" + "while отработал" + "</h2>");
             printWriter.println("</html>");
 
             statement.close();
