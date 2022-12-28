@@ -28,8 +28,8 @@ public class UsersServlet extends HttpServlet {
 
             printWriter.println("<html>");
             while (resultSet.next()) {
-                printWriter.println("<h2>" + resultSet.getString("name")
-                        + resultSet.getString("surname")
+                printWriter.println("<h2>" + resultSet.getString("name") + " "
+                        + resultSet.getString("surname") + " "
                         + resultSet.getInt("age")+ "</h2>");
             }
             printWriter.println("</html>");
