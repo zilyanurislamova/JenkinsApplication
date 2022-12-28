@@ -9,6 +9,7 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<a href="UsersServlet">Hello Servlet</a>
+<p></p>
+<a href="UsersServlet">Users Servlet</a>
 </body>
 </html>
