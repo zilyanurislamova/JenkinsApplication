@@ -20,7 +20,7 @@ pipeline {
                 permitAll()
             }
         }
-    }
+
 
     stages {
         stage('Build') {
