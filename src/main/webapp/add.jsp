@@ -21,7 +21,7 @@
     </label>
 
     <label>Age:
-        <input type="number" name="age"><br />
+        <input type="number" name="age" min="0"><br />
     </label>
     <button type="submit">Submit</button>
 </form>

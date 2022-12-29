@@ -1,4 +1,4 @@
-package com.example.jenkinsapplication.model;
+package com.example.jenkinsapplication.entity;
 
 public class User {
     private int id;

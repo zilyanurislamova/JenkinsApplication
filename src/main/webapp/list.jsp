@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Users</h1>
-<%@ page import="com.example.jenkinsapplication.model.User" %>
+<%@ page import="com.example.jenkinsapplication.entity.User" %>
 <%@ page import="java.util.List" %>
 <p>
     <%
@@ -21,5 +21,23 @@
         }
     %>
 </p>
+<p></p>
+<form method="get" action="update-user?id=<%request.getParameter("id");%>">
+    <label>Id for update:
+        <input type="number" name="id" min="1">
+    </label>
+    <button type="submit">Submit</button>
+</form>
+<p></p>
+<form method="get" action="delete-user?id=<%request.getParameter("id");%>">
+    <label>Id for delete:
+        <input type="number" name="id" min="1">
+    </label>
+    <button type="submit">Submit</button>
+</form>
+<p></p>
+<a href="add-user">Add user</a>
+<p></p>
+<a href="index.jsp">Go back</a>
 </body>
 </html>

@@ -52,7 +52,7 @@
                 <configuration>
                     <url>http://192.168.2.200:8085/manager/text</url>
                     <server>Tomcat</server>
-                    <path>/testdir</path>
+                    <path>/myapplication</path>
                 </configuration>
             </plugin>
             <plugin>

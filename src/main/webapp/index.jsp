@@ -12,8 +12,5 @@
 <p></p>
 <a href="users-list">Users list</a>
 <p></p>
-<a href="add.jsp">Add user</a>
-<p></p>
-<p></p>
 </body>
 </html>
