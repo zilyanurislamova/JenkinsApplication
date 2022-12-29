@@ -11,4 +11,20 @@
 <!--        <servlet-name>HelloServlet</servlet-name>-->
 <!--        <url-pattern>/hello-servlet</url-pattern>-->
 <!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>UsersListServlet</servlet-name>-->
+<!--        <servlet-class>com.example.jenkinsapplication.servlets.UsersListServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>UsersListServlet</servlet-name>-->
+<!--        <url-pattern>/users-list</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>AddUserServlet</servlet-name>-->
+<!--        <servlet-class>com.example.jenkinsapplication.servlets.AddUserServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>AddUserServlet</servlet-name>-->
+<!--        <url-pattern>/add-user</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>
