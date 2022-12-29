@@ -15,6 +15,8 @@ public class UsersListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserDao userDao = new UserDao();
         List<User> users = userDao.list();
+        HttpSession session = request.getSession();
+        session.setAttribute("users", users);
         response.sendRedirect("views/list.jsp");
     }
 
