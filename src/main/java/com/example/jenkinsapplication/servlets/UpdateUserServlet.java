@@ -32,6 +32,6 @@ public class UpdateUserServlet extends HttpServlet {
 
         UserDao userDao = UserDao.getInstance();
         userDao.update(id, user);
-        response.sendRedirect("/users-list");
+        response.sendRedirect("users-list");
     }
 }

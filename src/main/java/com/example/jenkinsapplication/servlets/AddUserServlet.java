@@ -22,6 +22,6 @@ public class AddUserServlet extends HttpServlet {
         User user = new User(name, surname, age);
         UserDao userDao = UserDao.getInstance();
         userDao.save(user);
-        response.sendRedirect("/users-list");
+        response.sendRedirect("users-list");
     }
 }
