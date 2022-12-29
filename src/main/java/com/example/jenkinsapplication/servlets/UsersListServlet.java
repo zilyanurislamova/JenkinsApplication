@@ -17,7 +17,7 @@ public class UsersListServlet extends HttpServlet {
         List<User> users = userDao.list();
         HttpSession session = request.getSession();
         session.setAttribute("users", users);
-        response.sendRedirect("views/list.jsp");
+        response.sendRedirect("list.jsp");
     }
 
     @Override

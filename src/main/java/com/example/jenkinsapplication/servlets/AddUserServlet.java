@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AddUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/add.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("add.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -24,6 +24,6 @@ public class AddUserServlet extends HttpServlet {
         User user = new User(name, surname, age);
         UserDao userDao = new UserDao();
         userDao.save(user);
-        response.sendRedirect("views/list.jsp");
+        response.sendRedirect("list.jsp");
     }
 }
