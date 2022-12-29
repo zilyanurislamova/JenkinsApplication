@@ -2,14 +2,12 @@ package com.example.jenkinsapplication.servlets;
 
 import java.io.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello, Zilya! pr testing again";
+        message = "Hello, Java!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

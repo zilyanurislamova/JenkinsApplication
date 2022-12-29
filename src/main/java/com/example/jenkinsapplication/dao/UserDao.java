@@ -1,13 +1,13 @@
 package com.example.jenkinsapplication.dao;
 
-import com.example.jenkinsapplication.model.User;
+import com.example.jenkinsapplication.entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
-
+    private static UserDao instance = new UserDao();
     private static final String URL = "jdbc:postgresql://192.168.2.202:5432/postgres";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "postgres";
@@ -26,6 +26,14 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private UserDao() {
+
+    }
+
+    public static UserDao getInstance() {
+        return instance;
     }
 
     public List<User> list() {
@@ -106,7 +114,7 @@ public class UserDao {
 
     public void delete(int id) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM Person WHERE id=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM users WHERE id=?");
 
             preparedStatement.setInt(1, id);
 
