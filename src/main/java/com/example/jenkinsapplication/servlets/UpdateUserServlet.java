@@ -24,12 +24,10 @@ public class UpdateUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         int id = (int) session.getAttribute("id");
-
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         int age = Integer.parseInt(request.getParameter("age"));
         User user = new User(name, surname, age);
-
         UserDao userDao = UserDao.getInstance();
         userDao.update(id, user);
         response.sendRedirect("users-list");
