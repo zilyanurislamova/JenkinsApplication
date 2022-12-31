@@ -5,6 +5,15 @@ pipeline {
         maven '3.8.6'
     }
 
+    scm {
+        git {
+            remote {
+                github('zilyanurislamova/JenkinsApplication')
+                    }
+                    branch('feature')
+            }
+    }
+
     stages {
         stage('Checkout') {
             steps {
