@@ -4,6 +4,21 @@ pipeline {
     tools {
         maven '3.8.6'
     }
+       scm {
+                git {
+                    remote {
+                        github('zilyanurislamova/JenkinsApplication')
+                    }
+                    branch('feature')
+                }
+            }
+            triggers {
+                githubPullRequest {
+                    admin('zilyanurislamova')
+                    useGitHubHooks()
+                    permitAll()
+                }
+            }
 
     stages {
         stage('Build') {
