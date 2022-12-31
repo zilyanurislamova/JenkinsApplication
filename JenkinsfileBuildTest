@@ -7,11 +7,9 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
                 git branch: 'feature',
                     credentialsId: 'github_ssh',
                     url: 'git@github.com:zilyanurislamova/JenkinsApplication.git'
-            }
         }
 
         stage('Build') {
