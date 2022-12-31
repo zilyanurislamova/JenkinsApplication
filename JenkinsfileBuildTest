@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-                git branch: 'feature',
-                    credentialsId: 'github_ssh',
-                    url: 'git@github.com:zilyanurislamova/JenkinsApplication.git'
-        }
-
         stage('Build') {
             steps {
                 sh "mvn -Dmaven.test.failure.ignore=false clean package"
