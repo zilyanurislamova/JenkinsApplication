@@ -4,43 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.example.jenkinsapplication.servlets.HelloServlet</servlet-class>
+        <servlet-name>FrontController</servlet-name>
+        <servlet-class>com.example.jenkinsapplication.servlets.FrontControllerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello-servlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>UsersListServlet</servlet-name>
-        <servlet-class>com.example.jenkinsapplication.servlets.UsersListServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UsersListServlet</servlet-name>
-        <url-pattern>/users-list</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>AddUserServlet</servlet-name>
-        <servlet-class>com.example.jenkinsapplication.servlets.AddUserServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddUserServlet</servlet-name>
-        <url-pattern>/add-user</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>DeleteUserServlet</servlet-name>
-        <servlet-class>com.example.jenkinsapplication.servlets.DeleteUserServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeleteUserServlet</servlet-name>
-        <url-pattern>/delete-user</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>UpdateUserServlet</servlet-name>
-        <servlet-class>com.example.jenkinsapplication.servlets.UpdateUserServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UpdateUserServlet</servlet-name>
-        <url-pattern>/update-user</url-pattern>
+        <servlet-name>FrontController</servlet-name>
+        <url-pattern>/front-controller</url-pattern>
     </servlet-mapping>
 </web-app>

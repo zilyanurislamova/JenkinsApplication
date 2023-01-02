@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add user page</title>
+    <title>Add user</title>
 </head>
 <body>
-<form method="post">
+<form method="post" action="/front-controller?command=SaveUser">
     <label>Name:
         <input type="text" name="name" minlength="2" maxlength="30"><br />
     </label>

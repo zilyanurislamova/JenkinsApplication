@@ -1,5 +1,6 @@
 package com.example.jenkinsapplication.dao;
 
+import com.example.jenkinsapplication.connection.DBConnection;
 import com.example.jenkinsapplication.entity.User;
 
 import java.sql.*;
@@ -7,32 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
-    private static UserDao instance = new UserDao();
-    private static final String URL = "jdbc:postgresql://192.168.2.202:5432/postgres";
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "postgres";
-
-    private static Connection connection;
-
-    static {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+    private static UserDao instance;
+    private static final Connection connection = DBConnection.getConnection();
 
     private UserDao() {
-
     }
 
     public static UserDao getInstance() {
+        if (instance == null) {
+            instance = new UserDao();
+        }
         return instance;
     }
 
@@ -60,7 +45,7 @@ public class UserDao {
         return users;
     }
 
-    public User getUser(int id) {
+    public User read(int id) {
         User user = null;
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM users WHERE id=?");
