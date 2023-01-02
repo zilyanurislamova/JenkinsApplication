@@ -13,7 +13,7 @@ public class SaveUserCommand extends FrontCommand{
         String surname = request.getParameter("surname");
         int age = Integer.parseInt(request.getParameter("age"));
         User user = new User(name, surname, age);
-        UserDao userDao = UserDao.getInstance();
+        UserDao userDao = new UserDao();
         userDao.save(user);
         redirectToList();
     }

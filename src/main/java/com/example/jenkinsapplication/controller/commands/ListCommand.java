@@ -11,7 +11,7 @@ import java.util.List;
 public class ListCommand extends FrontCommand{
     @Override
     public void process() throws ServletException, IOException {
-        UserDao userDao = UserDao.getInstance();
+        UserDao userDao = new UserDao();
         List<User> users = userDao.list();
         HttpSession session = request.getSession();
         session.setAttribute("users", users);

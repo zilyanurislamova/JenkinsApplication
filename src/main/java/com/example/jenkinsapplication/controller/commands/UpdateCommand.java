@@ -11,7 +11,7 @@ public class UpdateCommand extends FrontCommand{
     @Override
     public void process() throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        UserDao userDao = UserDao.getInstance();
+        UserDao userDao = new UserDao();
         User user = userDao.read(id);
         HttpSession session = request.getSession();
         session.setAttribute("id", id);

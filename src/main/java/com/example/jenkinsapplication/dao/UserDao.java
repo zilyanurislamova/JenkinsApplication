@@ -8,17 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
-    private static UserDao instance;
-    private static final Connection connection = DBConnection.getConnection();
 
-    private UserDao() {
-    }
+    private static Connection connection;
 
-    public static UserDao getInstance() {
-        if (instance == null) {
-            instance = new UserDao();
-        }
-        return instance;
+    public UserDao() {
+        connection = DBConnection.getConnection();
     }
 
     public List<User> list() {
