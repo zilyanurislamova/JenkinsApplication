@@ -30,6 +30,6 @@ public abstract class FrontCommand {
     }
 
     protected void redirectToList() throws IOException {
-        response.sendRedirect("/front-controller?command=List");
+        response.sendRedirect("front-controller?command=List");
     }
 }
