@@ -11,7 +11,7 @@
     <title>Add user</title>
 </head>
 <body>
-<form method="post" action="/front-controller?command=SaveUser">
+<form method="post" action="front-controller?command=SaveUser">
     <label>Name:
         <input type="text" name="name" minlength="2" maxlength="30"><br />
     </label>

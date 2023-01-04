@@ -8,6 +8,6 @@
 <h1><%= "Welcome to users app!" %>
 </h1>
 <br/>
-<a href="/front-controller?command=List">Users list</a>
+<a href="front-controller?command=List">Users list</a>
 </body>
 </html>

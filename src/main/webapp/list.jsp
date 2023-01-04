@@ -22,21 +22,21 @@
     %>
 </p>
 <p></p>
-<form method="post" action="/front-controller?command=Update">
+<form method="post" action="front-controller?command=Update">
     <label>Id for update:
         <input type="number" name="id" min="1">
     </label>
     <button type="submit">Submit</button>
 </form>
 <p></p>
-<form method="post" action="/front-controller?command=Delete">
+<form method="post" action="front-controller?command=Delete">
     <label>Id for delete:
         <input type="number" name="id" min="1">
     </label>
     <button type="submit">Submit</button>
 </form>
 <p></p>
-<a href="/front-controller?command=Add">Add user</a>
+<a href="front-controller?command=Add">Add user</a>
 <p></p>
 <a href="index.jsp">Go back</a>
 </body>
