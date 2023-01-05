@@ -6,9 +6,16 @@ pipeline {
     }
 
     stages {
+        stage('Build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
         stage('Deploy') {
             steps {
-                sh "mvn -Dmaven.test.skip=true tomcat7:redeploy"
+                sshagent(['tomcat_ssh']) {
+                    sh 'scp /var/lib/jenkins/workspace/JenkinsApplication/target/*.war /opt/tomcat/apache-tomcat-9.0.70/webapps/JenkinsApplication.war'
+                }
             }
         }
     }
