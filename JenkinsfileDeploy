@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['tomcat_ssh']) {
-                    sh 'scp /var/lib/jenkins/workspace/PushToMasterTriggered/target/*.war /opt/tomcat/apache-tomcat-9.0.70/webapps/JenkinsApplication.war'
+                    sh 'scp /var/lib/jenkins/workspace/PushToMasterTriggered/target/*.war root@34.116.131.217:/opt/tomcat/apache-tomcat-9.0.70/webapps/'
                 }
             }
         }
